@@ -1,0 +1,15 @@
+body {
+    background-image: url("banking.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-attachment: fixed;
+  }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #567856;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: left;
+}
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
