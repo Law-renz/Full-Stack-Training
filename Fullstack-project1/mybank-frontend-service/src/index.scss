@@ -3,7 +3,24 @@ body {
     background-repeat: no-repeat;
     background-position: bottom left;
     background-attachment: fixed;
+
+    margin: 300;
+    height: 150vh;
+    align-items: center;
+    justify-content: center;
   }
+  .container,
+.form-input,
+.form-button {
+    font:600px 1rem 'Quicksand', san-serif;
+}
+.form-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.form-button:active {
+  transform: scale(0.98);
+}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -11,5 +28,32 @@ table {
     font-family: monospace;
     font-size: 25px;
     text-align: left;
+}
+
+.container {
+   width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background:white;
+}
+.form-input {
+  display: block;
+  width:100%;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  border: 3px solid black;
+  outline: none;
+  background: rgba(255, 254, 254, 0.933);
+  transition: background 0.2s, border-color 0.2s;
+}
+.form-button{
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.1;
 }
 @import '../node_modules/bootstrap/scss/bootstrap.scss';

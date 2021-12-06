@@ -1,4 +1,4 @@
-package com.proj1.entity;
+package com.proj1.entity.Transaction;
 import javax.persistence.*;
 
     @Entity
@@ -8,17 +8,17 @@ import javax.persistence.*;
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int id; // 0
-        private String title; // null
+        private int amount; // 0
         private boolean completed; // false
 
-        public Transaction(int id, String title, boolean completed) {
+        public Transaction(int id, int amount, boolean completed) {
             this.id = id;
-            this.title = title;
+            this.amount = amount;
             this.completed = completed;
         }
 
-        public Transaction(String title) {
-            this.title = title;
+        public Transaction(int amount) {
+            this.amount = amount;
         }
 
         public Transaction() {
@@ -31,12 +31,12 @@ import javax.persistence.*;
             this.id = id;
         }
 
-        public String getTitle() {
-            return title;
+        public int getAmount() {
+            return amount;
         }
 
-        public void setTitle(String title) {
-            this.title = title;
+        public void setAmount(int amount) {
+            this.amount = amount;
         }
 
         public boolean isCompleted() {
@@ -49,9 +49,9 @@ import javax.persistence.*;
 
         @Override
         public String toString() {
-            return "Todo{" +
+            return "Transaction{" +
                     "id=" + id +
-                    ", title='" + title + '\'' +
+                    ", amount='" + amount + '\'' +
                     ", completed=" + completed +
                     '}';
         }
